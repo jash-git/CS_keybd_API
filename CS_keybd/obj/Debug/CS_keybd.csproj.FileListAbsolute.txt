@@ -1,0 +1,6 @@
+C:\Users\jashliao\Desktop\CS_keybd\CS_keybd\bin\Debug\CS_keybd.exe.config
+C:\Users\jashliao\Desktop\CS_keybd\CS_keybd\bin\Debug\CS_keybd.exe
+C:\Users\jashliao\Desktop\CS_keybd\CS_keybd\bin\Debug\CS_keybd.pdb
+C:\Users\jashliao\Desktop\CS_keybd\CS_keybd\obj\Debug\CS_keybd.csprojResolveAssemblyReference.cache
+C:\Users\jashliao\Desktop\CS_keybd\CS_keybd\obj\Debug\CS_keybd.exe
+C:\Users\jashliao\Desktop\CS_keybd\CS_keybd\obj\Debug\CS_keybd.pdb
