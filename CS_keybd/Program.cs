@@ -15,6 +15,8 @@ namespace CS_keybd
         public static extern void keybd_event(byte bVk, byte bScan, uint dwFlags,uint dwExtraInfo);
         static void Main(string[] args)
         {
+            /*
+            //單純數字 & 英文
             do
             {
 
@@ -40,6 +42,42 @@ namespace CS_keybd
                 keybd_event(13, 0, 2, 0);// ENTER key up
                 
 
+            }
+            while (true);
+            */
+
+            //---
+            //語系切換
+            keybd_event(0x11, 0, 0, 0);  //0x11---ctrl  按下
+            keybd_event(32, 0, 0, 0); // 32--空格键按下
+            Thread.Sleep(400);
+            keybd_event(32, 0, 0x02, 0);// 32--空格键弹起
+            keybd_event(0x11, 0, 0x02, 0); //0x11---ctrl弹起 
+            Thread.Sleep(400);
+            //---語系切換
+            do
+            {
+                //注音 天 中文輸入模擬
+                //W
+                keybd_event(0x57, 0, 0, 0);
+                keybd_event(0x57, 0, 0x02, 0);
+                Thread.Sleep(400);
+                //U
+                keybd_event(0x55, 0, 0, 0);
+                keybd_event(0x55, 0, 0x02, 0);
+                Thread.Sleep(400);
+                //0
+                keybd_event(0x30, 0, 0, 0);
+                keybd_event(0x30, 0, 0x02, 0);
+                Thread.Sleep(400);
+
+                keybd_event(32, 0, 0, 0); // 32--空格键按下
+                keybd_event(32, 0, 0x02, 0);// 32--空格键弹起
+                Thread.Sleep(400);
+
+                //確定選字
+                keybd_event(13, 0, 0, 0);// ENTER key down
+                keybd_event(13, 0, 2, 0);// ENTER key up
             }
             while (true);
         }
